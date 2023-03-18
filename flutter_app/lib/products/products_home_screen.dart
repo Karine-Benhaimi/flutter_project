@@ -43,7 +43,7 @@ class _ProductsHomeScreenState extends State<ProductsHomeScreen>
       child: Container(
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Profile'),
+            title: Text('Nos produits'),
             backgroundColor: Color(0xFF947F6B), // set app bar color to a darker coffee color
           ),
           body: Stack(
