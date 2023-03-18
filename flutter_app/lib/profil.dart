@@ -19,7 +19,7 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
+        child : Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget> [
             Center (

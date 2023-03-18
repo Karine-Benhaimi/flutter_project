@@ -4,19 +4,31 @@ import 'package:flutter_app/profil.dart';
 
 class ClientHomePage extends StatelessWidget {
   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF8E1D9),
       appBar: AppBar(
-        title: Text('Page d\'accueil pour client'),
+        title: Text('Page d\'acceuil pour client'),
         backgroundColor: Color(0xFF947F6B),
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Spacer(),
-          CardProduct("Produits"),
-          CardProfil("Mon Profil"),
-          Spacer(),
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/coffee/bg.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Column(
+            children: [
+              Spacer(),
+              CardProduct('Produits'),
+              CardProfil('Mon Profile'),
+              Spacer(),
+            ],
+          ),
         ],
       ),
     );
@@ -38,7 +50,7 @@ class CardProfil extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (context) => ProfilePage(
                   name: 'Karine',
-                  imageUrl: 'https://nick-intl.mtvnimages.com/uri/mgid:file:gsp:kids-assets:/nick/properties/spongebob-squarepants/characters/gary-character-web-desktop.png?height=0&width=480&matte=true&crop=false',
+                  imageUrl: 'https://366icons.com/media/01/profile-avatar-account-icon-16699.png',
                   bio: 'Coffee lover and enthusiast.',
                   number:'06 01 02 03 04',
                   mail: 'hi@mail.fr'

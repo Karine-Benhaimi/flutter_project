@@ -10,24 +10,38 @@ class AdminHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      backgroundColor: Color(0xFFF8E1D9),
       appBar: AppBar(
         title: Text('Page d\'acceuil pour admin'),
-          backgroundColor: Color(0xFF947F6B),
+        backgroundColor: Color(0xFF947F6B),
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Spacer(),
-          CardClient('Clients'),
-          CardCommand('Commandes'),
-          CardProduct('Produits'),
-          Spacer(),
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/coffee/bg.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Column(
+            children: [
+              Spacer(),
+              CardClient('Clients'),
+              CardCommand('Commandes'),
+              CardProduct('Produits'),
+              Spacer(),
+            ],
+          ),
         ],
       ),
     );
   }
 }
+
+
+
+
 class CardClient extends StatelessWidget {
   final String str;
   CardClient(this.str);

@@ -115,7 +115,7 @@ class DetailClientPage extends StatelessWidget {
                 height: 200,
                 child: CircleAvatar(
                   radius: 100.0,
-                  backgroundImage: NetworkImage('https://nick-intl.mtvnimages.com/uri/mgid:file:gsp:kids-assets:/nick/properties/spongebob-squarepants/characters/gary-character-web-desktop.png?height=0&width=480&matte=true&crop=false'),
+                  backgroundImage: NetworkImage('https://366icons.com/media/01/profile-avatar-account-icon-16699.png'),
                   backgroundColor: Color(0xFFF8E1D9),
                 ),
               ),
