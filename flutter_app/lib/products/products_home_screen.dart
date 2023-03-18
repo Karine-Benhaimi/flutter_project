@@ -42,6 +42,10 @@ class _ProductsHomeScreenState extends State<ProductsHomeScreen>
       data: ProductsAppTheme.buildLightTheme(),
       child: Container(
         child: Scaffold(
+          appBar: AppBar(
+            title: Text('Profile'),
+            backgroundColor: Color(0xFF947F6B), // set app bar color to a darker coffee color
+          ),
           body: Stack(
             children: <Widget>[
               InkWell(
@@ -54,7 +58,6 @@ class _ProductsHomeScreenState extends State<ProductsHomeScreen>
                 },
                 child: Column(
                   children: <Widget>[
-                    getAppBarUI(),
                     Expanded(
                       child: NestedScrollView(
                         controller: _scrollController,
@@ -359,14 +362,7 @@ class _ProductsHomeScreenState extends State<ProductsHomeScreen>
           children: <Widget>[
             Expanded(
               child: Center(
-                child: Text(
-                  'Nos Produits',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 22,
-                  ),
-                ),
+
               ),
             ),
 
