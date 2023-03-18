@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/client_home_page.dart';
 import 'package:flutter_app/admin_home_page.dart';
+import 'package:flutter_app/main.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -15,7 +16,10 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Créer un compte')),
+      backgroundColor: Color(0xFFF8E1D9),
+      appBar: AppBar(title: Text('Créer un compte'),
+        backgroundColor: Color(0xFF947F6B),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -69,8 +73,11 @@ class _RegisterPageState extends State<RegisterPage> {
                     }
                   }
                 },
-                child: Text('Créer un compte'),
-              ),
+                  style: ElevatedButton.styleFrom(
+                    primary: HexColor('#947f6b'),
+                  ),
+                  child: Text('Créer un compte', style: TextStyle(color: Colors.white)),
+                ),
             ],
           ),
         ),

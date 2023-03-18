@@ -343,7 +343,6 @@ class _ProductsHomeScreenState extends State<ProductsHomeScreen>
     );
   }
 
-
   Widget getAppBarUI() {
     return Container(
       decoration: BoxDecoration(
@@ -362,10 +361,8 @@ class _ProductsHomeScreenState extends State<ProductsHomeScreen>
           children: <Widget>[
             Expanded(
               child: Center(
-
               ),
             ),
-
           ],
         ),
       ),
