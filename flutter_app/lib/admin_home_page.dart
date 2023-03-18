@@ -37,7 +37,7 @@ class CardClient extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
-          color: Color(0xFFE1BEB1),
+          color: Colors.brown[100],
           child: new InkWell(
             onTap: (){
               Navigator.push(
@@ -72,7 +72,7 @@ CardProduct(this.str);
 @override
 Widget build(BuildContext context) {
   return Card(
-    color: Color(0xFFE1BEB1),
+    color: Colors.brown[100],
     child: InkWell(
       onTap: (){
         Navigator.push(
@@ -105,7 +105,7 @@ class CardCommand extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color(0xFFE1BEB1),
+      color: Colors.brown[100],
       child: InkWell(
         onTap: (){
           Navigator.push(

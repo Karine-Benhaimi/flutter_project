@@ -31,6 +31,7 @@ class CardProfil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
+        color: Colors.brown[100],
         child: new InkWell(
           onTap: (){
             Navigator.push(
@@ -47,7 +48,15 @@ class CardProfil extends StatelessWidget {
           child: SizedBox(
             width: 300,
             height: 100,
-            child: Center(child: Text(str)),
+            child: Center(
+              child: Text(
+                str,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           ),
         ),
       ),
@@ -63,6 +72,7 @@ class CardProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
+        color: Colors.brown[100],
         child: new InkWell(
           onTap: (){
             Navigator.push(
@@ -73,7 +83,15 @@ class CardProduct extends StatelessWidget {
           child: SizedBox(
             width: 300,
             height: 100,
-            child: Center(child: Text(str)),
+            child: Center(
+              child: Text(
+                str,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           ),
         ),
       ),
