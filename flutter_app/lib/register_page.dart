@@ -20,8 +20,17 @@ class _RegisterPageState extends State<RegisterPage> {
       appBar: AppBar(title: Text('Créer un compte'),
         backgroundColor: Color(0xFF947F6B),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+    body: Center(
+    child: Container(
+    constraints: BoxConstraints.expand(),
+    decoration: BoxDecoration(
+    color: HexColor('#f8e1d9'),
+    image: DecorationImage(
+    image: AssetImage('assets/coffee/coffee_6-re.jpg'),
+    fit: BoxFit.cover,
+
+    ),
+    ),
         child: Form(
           key: _formKey,
           child: Column(
@@ -82,6 +91,7 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
         ),
       ),
+    ),
     );
   }
 }
