@@ -56,73 +56,73 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          constraints: BoxConstraints.expand(),
-          decoration: BoxDecoration(
-            color: HexColor('#f8e1d9'),
-            image: DecorationImage(
-              image: AssetImage('assets/coffee/coffee_6-re.jpg'),
-              fit: BoxFit.cover,
+        body: Center(
+          child: Container(
+            constraints: BoxConstraints.expand(),
+            decoration: BoxDecoration(
+              color: HexColor('#f8e1d9'),
+              image: DecorationImage(
+                image: AssetImage('assets/coffee/coffee_6-re.jpg'),
+                fit: BoxFit.cover,
 
+              ),
             ),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(height: 150),
-              Container(
-                width: 300,
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    children: <Widget>[
-                      TextField(
-                        controller: _usernameController,
-                        decoration: InputDecoration(
-                          hintText: 'Nom d\'utilisateur',
-                          hintStyle: TextStyle(color: HexColor('#3E3D3A')),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height: 150),
+                Container(
+                  width: 300,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: <Widget>[
+                        TextField(
+                          controller: _usernameController,
+                          decoration: InputDecoration(
+                            hintText: 'Nom d\'utilisateur',
+                            hintStyle: TextStyle(color: HexColor('#3E3D3A')),
+                          ),
+                          style: TextStyle(color: HexColor('#3E3D3A')),
                         ),
-                        style: TextStyle(color: HexColor('#3E3D3A')),
-                      ),
-                      SizedBox(height: 20),
-                      TextField(
-                        controller: _passwordController,
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          hintText: 'Mot de passe',
-                          hintStyle: TextStyle(color: HexColor('#3E3D3A')),
+                        SizedBox(height: 20),
+                        TextField(
+                          controller: _passwordController,
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            hintText: 'Mot de passe',
+                            hintStyle: TextStyle(color: HexColor('#3E3D3A')),
+                          ),
+                          style: TextStyle(color: HexColor('#3E3D3A')),
                         ),
-                        style: TextStyle(color: HexColor('#3E3D3A')),
-                      ),
-                      SizedBox(height: 20),
-                      ElevatedButton(
-                        onPressed: _login,
-                        style: ElevatedButton.styleFrom(
-                          primary: HexColor('#947f6b'),
+                        SizedBox(height: 20),
+                        ElevatedButton(
+                          onPressed: _login,
+                          style: ElevatedButton.styleFrom(
+                            primary: HexColor('#947f6b'),
+                          ),
+                          child: Text('Se connecter', style: TextStyle(color: Colors.white)),
                         ),
-                        child: Text('Se connecter', style: TextStyle(color: Colors.white)),
-                      ),
-                      SizedBox(height: 20),
-                      TextButton(
-                        onPressed: _goToRegisterPage,
-                        child: Text('Créer un compte', style: TextStyle(color: HexColor('#3E3D3A'))),
-                      ),
-                      SizedBox(height: 20),
-                      TextButton(
-                        onPressed: () {
-                          //TODO: Add password reset functionality
-                        },
-                        child: Text('Modifier le mot de passe', style: TextStyle(color: HexColor('#3E3D3A'))),
-                      ),
-                    ],
+                        SizedBox(height: 20),
+                        TextButton(
+                          onPressed: _goToRegisterPage,
+                          child: Text('Créer un compte', style: TextStyle(color: HexColor('#3E3D3A'))),
+                        ),
+                        SizedBox(height: 20),
+                        TextButton(
+                          onPressed: () {
+                            //TODO: Add password reset functionality
+                          },
+                          child: Text('Modifier le mot de passe', style: TextStyle(color: HexColor('#3E3D3A'))),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      )
+        )
     );
   }
 }
