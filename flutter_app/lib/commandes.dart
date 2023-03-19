@@ -110,7 +110,7 @@ class DetailOrderPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Client Name:",
+              "Nom du client :",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 5),
@@ -120,7 +120,7 @@ class DetailOrderPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              "Order Number:",
+              "Numéro de commande :",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 5),
@@ -130,7 +130,7 @@ class DetailOrderPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              "Order Status:",
+              "Statu de commande :",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 5),
