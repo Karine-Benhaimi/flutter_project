@@ -1,6 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 
+import 'package:flutter_app/base/constant.dart';
+
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+
 class Client {
   final String name;
   final String email;
@@ -25,19 +31,29 @@ class ClientPage extends StatefulWidget {
 class _ClientPageState extends State<ClientPage> {
   List<Client> _clients = [];
 
-  Future<void> _loadClients() async {
-    String jsonString =
-    await DefaultAssetBundle.of(context).loadString('assets/clients.json');
-    List<dynamic> jsonList = json.decode(jsonString);
+  Future loadClients() async
+  {
+    var url = Uri.http(Constant.ipaddress + ":2101", '/mailing_auth/getClients.php', {'q': '{http}'});
+    print(url.toString());
+
+    var response = await http.get(url);
+
+    var data = json.decode(response.body);
+    List<dynamic> jsonList = data;
     setState(() {
       _clients = jsonList.map((json) => Client.fromJson(json)).toList();
     });
+
+
   }
+
+
 
   @override
   void initState() {
     super.initState();
-    _loadClients();
+    //_loadClients();
+    loadClients();
   }
 
   @override
