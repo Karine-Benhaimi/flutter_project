@@ -15,6 +15,8 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
   final _formKey = GlobalKey<FormState>();
+  TextEditingController _usernameController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
   String? _username;
   String? _password;
 
@@ -23,9 +25,11 @@ class _RegisterPageState extends State<RegisterPage> {
     var url = Uri.http(Constant.ipaddress + ":2101", '/mailing_auth/inscription.php', {'q': '{http}'});
     print(url.toString());
 
+    print( "user : " + _usernameController.text );
+
     var response = await http.post(url, body: {
-      "email": _username,
-      "mdp": _password,
+      "email": _usernameController.text.toString(),
+      "mdp": _passwordController.text.toString(),
     });
 
 
@@ -42,7 +46,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
     print( "Message : " + data.toString() );
 
-    if ( data.toString() == "Compte créé avec succès. Veuillez vérifier votre email pour votre QR code de connexion." ) {
+    if ( data.toString() == "Compte créé avec succès. Veuillez vérifier votre email pour votre QR code d..." ) {
       print("lets go");
       Navigator.push(
         context,
@@ -75,6 +79,7 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Column(
               children: [
                 TextFormField(
+                  controller: _usernameController,
                   decoration: InputDecoration(labelText: 'Nom d\'utilisateur'),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -87,6 +92,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   },
                 ),
                 TextFormField(
+                  controller: _passwordController,
                   decoration: InputDecoration(labelText: 'Mot de passe'),
                   obscureText: true,
                   validator: (value) {
