@@ -1,0 +1,7 @@
+{
+    "require": {
+        "silex/silex": "^2.0",
+        "symfony/form": "^5.3",
+        "bacon/bacon-qr-code": "^2.0"
+    }
+}
